@@ -8,7 +8,7 @@ class DocsList extends StatelessWidget {
     required this.data,
   });
 
-  final List<Doc> data;
+  final List<Document> data;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class DocsList extends StatelessWidget {
 }
 
 class Item extends StatelessWidget {
-  final Doc item;
+  final Document item;
   const Item({super.key, required this.item});
 
   @override

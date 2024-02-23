@@ -9,10 +9,19 @@ class DocumentDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Colors.black87,
         title: const Center(
             child: Text(
-          'Arr Documentation asd',
+          'Arr Documentation',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,

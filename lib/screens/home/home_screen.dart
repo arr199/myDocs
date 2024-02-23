@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_docs/providers/search_provider.dart';
 import 'package:my_docs/screens/home/widgets/docs_list.dart';
+import 'package:my_docs/screens/home/widgets/search_bar.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,66 +43,11 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Expanded(
-              child: Container(
-                height: 50,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      constraints: const BoxConstraints(maxWidth: 600),
-                      width: screenSize * 0.8,
-                      alignment: Alignment.center,
-                      child: TextField(
-                        onSubmitted: (value) {
-                          filterSearch();
-                          searchInputFocusNode.requestFocus();
-                        },
-                        onChanged: (value) {},
-                        focusNode: searchInputFocusNode,
-                        controller: searchInputController,
-                        decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Search docs by tag or name',
-                            contentPadding: EdgeInsets.only(left: 20.0),
-                            suffixIcon: Icon(
-                              Icons.search,
-                              color: Colors.black,
-                              size: 20.0,
-                            )),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    DecoratedBox(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: BoxBorder.lerp(
-                          Border.all(color: Colors.black87),
-                          Border.all(color: Colors.black87),
-                          0.5,
-                        ),
-                      ),
-                      child: InkWell(
-                        onTap: () {
-                          filterSearch();
-                        },
-                        child: Container(
-                            width: 100,
-                            child: const Center(
-                                child: Text(
-                              "Search",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ))),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              child: MainSearchBar(
+                  screenSize: screenSize,
+                  filterSearch: filterSearch,
+                  searchInputFocusNode: searchInputFocusNode,
+                  searchInputController: searchInputController),
             ),
           ),
           const SizedBox(

@@ -1,14 +1,11 @@
-
-
-
-class Doc {
+class Document {
   final String id;
   final String title;
   final String description;
   final String content;
   final List<String> tags;
-  
-  Doc({
+
+  Document({
     required this.id,
     required this.title,
     required this.description,
@@ -16,8 +13,8 @@ class Doc {
     required this.tags,
   });
 
-  factory Doc.fromJson(Map<String, dynamic> json) {
-    return Doc(
+  factory Document.fromJson(Map<String, dynamic> json) {
+    return Document(
       id: json['id'],
       description: json['description'],
       title: json['title'],
@@ -36,4 +33,3 @@ class Doc {
     };
   }
 }
-
