@@ -60,17 +60,17 @@ class MainSearchBar extends StatelessWidget {
               onTap: () {
                 filterSearch();
               },
-              child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  child: const Center(
-                      child: Text(
-                    "Search",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ))),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                child: Text(
+                  "Search",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
             ),
           )
         ],

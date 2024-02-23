@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_docs/screens/createDoc/create_doc_screen.dart';
 import 'package:my_docs/screens/docDetails/doc_details_screen.dart';
 import 'package:my_docs/screens/home/home_screen.dart';
 
@@ -19,6 +20,13 @@ final GoRouter AppRouter = GoRouter(
                 id: state.pathParameters['id']!,
               );
             }),
+        GoRoute(
+          path: "createDocument",
+          name: "createDocument",
+          builder: (BuildContext context, GoRouterState state) {
+            return const CreateDocScreen();
+          },
+        )
       ],
     ),
   ],
