@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_docs/providers/search_provider.dart';
 import 'package:my_docs/screens/home/widgets/docs_list.dart';
-import 'package:my_docs/screens/home/widgets/search_bar.dart';
+import 'package:my_docs/screens/home/widgets/main_search_bar.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
