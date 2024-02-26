@@ -17,9 +17,11 @@ class HomeScreen extends StatelessWidget {
     final data = context.watch<SearchProvider>().data;
     final filterSearch = context.read<SearchProvider>().filterData;
 
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black87,
+          backgroundColor: colors.primary  ,
           title: const Center(
               child: Text(
             'Arr Documentation',
@@ -62,7 +64,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.white,
+          backgroundColor: colors.background,
           splashColor: Colors.black12,
           onPressed: () {
             context.goNamed('createDocument');

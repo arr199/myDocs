@@ -9,7 +9,7 @@ final exampleData = [
   },
   {
     "id": "2",
-    "title": "Another Title",
+    "title": "Adding things in github",
     "description": "Another Description",
     "content": "Another Content",
     "tags": ["tag4", "tag5"]

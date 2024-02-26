@@ -16,6 +16,7 @@ class MainSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return SizedBox(
       height: 50,
       child: Row(
@@ -33,13 +34,25 @@ class MainSearchBar extends StatelessWidget {
               onChanged: (value) {},
               focusNode: searchInputFocusNode,
               controller: searchInputController,
-              decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
+              style: TextStyle(color: colors.primary),
+              decoration: InputDecoration(
+                  focusColor: colors.primary,
+                  enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(color: colors.primary.withOpacity(.7))),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: colors.primary)),
+                  labelStyle: TextStyle(
+                    color: colors.primary.withOpacity(.7),
+                    fontWeight: FontWeight.w900,
+                  ),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: colors.primary)),
                   labelText: 'Search docs by tag or name',
                   contentPadding: EdgeInsets.only(left: 20.0),
                   suffixIcon: Icon(
                     Icons.search,
-                    color: Colors.black,
+                    color: colors.primary,
                     size: 20.0,
                   )),
             ),

@@ -7,6 +7,8 @@ class DocumentDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -18,7 +20,7 @@ class DocumentDetailScreen extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        backgroundColor: Colors.black87,
+        backgroundColor: colors.primary,
         title: const Center(
             child: Text(
           'Arr Documentation',

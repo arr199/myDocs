@@ -13,8 +13,26 @@ class Document {
     required this.tags,
   });
 
-  factory Document.fromJson(Map<String, dynamic> json) {
-    return Document(
+}
+
+class DocumentSchema {
+  
+  final String id;
+  final String title;
+  final String description;
+  final String content;
+  final List<String> tags;
+
+  DocumentSchema({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.content,
+    required this.tags,
+  });
+
+  factory DocumentSchema.fromJson(Map<String, dynamic> json) {
+    return DocumentSchema(
       id: json['id'],
       description: json['description'],
       title: json['title'],
@@ -32,4 +50,16 @@ class Document {
       'tags': tags,
     };
   }
+
+  Document toDocument() => Document(
+      id: id,
+      title: title,
+      description: description,
+      content: content,
+      tags: tags,
+    );  
+
 }
+
+
+
