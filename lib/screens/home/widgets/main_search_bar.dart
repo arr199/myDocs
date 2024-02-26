@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_docs/screens/home/widgets/search_button.dart';
 
 class MainSearchBar extends StatelessWidget {
   const MainSearchBar({
@@ -34,22 +35,21 @@ class MainSearchBar extends StatelessWidget {
               onChanged: (value) {},
               focusNode: searchInputFocusNode,
               controller: searchInputController,
-              style: TextStyle(color: colors.primary),
+              style:
+                  TextStyle(color: colors.primary, fontWeight: FontWeight.w700),
               decoration: InputDecoration(
                   focusColor: colors.primary,
                   enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: colors.primary.withOpacity(.7))),
+                      borderSide: BorderSide(
+                          color: colors.primary.withOpacity(.7), width: 3)),
                   focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: colors.primary)),
+                      borderSide: BorderSide(color: colors.primary, width: 3)),
                   labelStyle: TextStyle(
                     color: colors.primary.withOpacity(.7),
                     fontWeight: FontWeight.w900,
                   ),
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: colors.primary)),
                   labelText: 'Search docs by tag or name',
-                  contentPadding: EdgeInsets.only(left: 20.0),
+                  contentPadding: const EdgeInsets.only(left: 20.0),
                   suffixIcon: Icon(
                     Icons.search,
                     color: colors.primary,
@@ -69,22 +69,7 @@ class MainSearchBar extends StatelessWidget {
                 0.5,
               ),
             ),
-            child: InkWell(
-              onTap: () {
-                filterSearch();
-              },
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                child: Text(
-                  "Search",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
-            ),
+            child: const SearchButton(),
           )
         ],
       ),

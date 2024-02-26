@@ -8,7 +8,7 @@ class SearchProvider extends ChangeNotifier {
   List<Document> data =
       exampleData.map((e) => DocumentSchema.fromJson(e).toDocument()).toList();
 
-  Future<void> filterData() async {
+  Future<void> filterSearch() async {
     final initialData = exampleData
         .map((e) => DocumentSchema.fromJson(e).toDocument())
         .toList();
@@ -22,3 +22,5 @@ class SearchProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+// Path: lib/screens/search_screen.dart

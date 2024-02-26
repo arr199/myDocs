@@ -16,12 +16,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => SearchProvider())
       ],
       child: MaterialApp.router(
-        theme: AppTheme(selectedColor: 2).theme(),
+        theme: AppTheme(selectedColor: 3).theme(),
         debugShowCheckedModeBanner: false,
         title: 'Arr Documentation',
         routerConfig: AppRouter,
-    
-      
       ),
     );
   }

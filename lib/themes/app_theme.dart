@@ -27,7 +27,7 @@ class AppTheme {
   
   ThemeData theme() {
     return ThemeData(
-      scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
+      scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0),
       colorSchemeSeed: _colors[selectedColor],
       appBarTheme: AppBarTheme(
         backgroundColor: _colors[selectedColor],
