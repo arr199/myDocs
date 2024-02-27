@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_docs/shared/widgets/app_bar.dart';
 
 class DocumentDetailScreen extends StatelessWidget {
   final String id;
@@ -7,30 +8,8 @@ class DocumentDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-    
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        backgroundColor: colors.primary,
-        title: const Center(
-            child: Text(
-          'Arr Documentation',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        )),
-      ),
+      appBar: const MainAppBar(),
       body: Center(child: Text(id)),
     );
   }

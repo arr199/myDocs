@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:my_docs/providers/search_provider.dart';
 import 'package:my_docs/screens/home/widgets/docs_list.dart';
 import 'package:my_docs/screens/home/widgets/main_search_bar.dart';
+import 'package:my_docs/shared/widgets/app_bar.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,18 +22,7 @@ class HomeScreen extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: colors.primary,
-          title: const Center(
-              child: Text(
-            'Arr Documentation',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          )),
-        ),
+        appBar: const MainAppBar(home: true),
         body: Column(
           children: [
             const SizedBox(
