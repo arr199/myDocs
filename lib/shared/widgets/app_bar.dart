@@ -7,7 +7,6 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     this.home = false,
   });
-
   @override
   Size get preferredSize => const Size.fromHeight(60.0);
 
