@@ -115,15 +115,16 @@ class DescriptionComponent extends StatelessWidget {
 class CodeBlockComponent extends StatelessWidget {
   CodeBlockComponent({super.key});
   final String source = """
-const [ isAlive , setIsAlive] = useState(true)
+  const [ isAlive , setIsAlive] = useState(true)
 
-useEffect( () => {
-  console.log("asd")
-} , [])
+  useEffect( () => {
+    console.log("asd")
+  } , [])
 
-let a = 12
+  let a = 12
 
-const a = 23;""";
+  const a = 23;
+""";
 
   @override
   Widget build(BuildContext context) {
