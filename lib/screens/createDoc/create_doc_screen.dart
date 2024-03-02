@@ -132,6 +132,7 @@ class CodeBlockComponent extends StatelessWidget {
     return HighlightView(
       // The original code to be highlighted
       source,
+      
       // Specify language
       // It is recommended to give it a value for performance
       languageId: javascript.id,
