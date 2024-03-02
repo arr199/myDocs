@@ -24,3 +24,5 @@ class SearchProvider extends ChangeNotifier {
 }
 
 // Path: lib/screens/search_screen.dart
+
+
