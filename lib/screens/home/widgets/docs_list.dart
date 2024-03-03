@@ -38,7 +38,7 @@ class Item extends StatelessWidget {
         ? "${item.description.substring(0, 30)} ..."
         : item.description;
 
-    // final colors = Theme.of(context).colorScheme;
+    final colors = Theme.of(context).colorScheme;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
