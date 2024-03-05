@@ -38,8 +38,6 @@ class Item extends StatelessWidget {
         ? "${item.description.substring(0, 30)} ..."
         : item.description;
 
-    // final colors = Theme.of(context).colorScheme;
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -71,7 +69,9 @@ class Item extends StatelessWidget {
               ),
               child: Text(
                 description,
-                style: const TextStyle(color: Colors.white70),
+                style: const TextStyle(
+                  color: Colors.white70,
+                ),
               )),
         ),
         const SizedBox(
