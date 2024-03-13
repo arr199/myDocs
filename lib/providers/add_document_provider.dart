@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:my_docs/schemas/document_component.dart';
 
 class AddDocumentProvider extends ChangeNotifier {
@@ -15,4 +16,24 @@ class AddDocumentProvider extends ChangeNotifier {
         content: " const [ isOpen , setIsOpen ] = useState()",
         id: "as"),
   ];
+
+  TextEditingController content = TextEditingController();
+  ComponentType type = ComponentType.title;
+
+  void setState() {
+    notifyListeners();
+  }
+
+  void addComponent({
+    required String componentContent,
+    required ComponentType componentType,
+  }) {
+    componentsList.add(DocumentComponent(
+      type: componentType,
+      content: componentContent,
+      id: DateTime.now().toString(),
+    ));
+
+    notifyListeners();
+  }
 }

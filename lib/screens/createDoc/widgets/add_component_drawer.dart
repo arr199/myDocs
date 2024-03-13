@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_docs/providers/add_document_provider.dart';
 import 'package:my_docs/schemas/document_component.dart';
+import 'package:my_docs/screens/createDoc/widgets/add_content_button.dart';
+import 'package:provider/provider.dart';
 
 class AddComponentDrawer extends StatelessWidget {
   const AddComponentDrawer({
@@ -48,9 +51,16 @@ class AddComponentDrawer extends StatelessWidget {
                             fontWeight: FontWeight.w700),
                       ),
                       DropdownButton(
-                        onChanged: (value) {},
+                        value: context.watch<AddDocumentProvider>().type,
+                        onChanged: (value) {
+                          context.read<AddDocumentProvider>().type =
+                              value as ComponentType;
+                          context.read<AddDocumentProvider>().setState();
+                        },
                         items: ComponentType.values.map((ComponentType type) {
                           return DropdownMenuItem(
+                            key: Key(type.toString()),
+                            onTap: () {},
                             value: type,
                             child: Text(
                               type.toString().split('.').last,
@@ -78,9 +88,10 @@ class AddComponentDrawer extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       TextField(
+                        controller:
+                            context.watch<AddDocumentProvider>().content,
                         maxLines: 8,
                         onSubmitted: (value) {},
-                        onChanged: (value) {},
                         style: TextStyle(
                             color: colors.primary, fontWeight: FontWeight.w700),
                         decoration: InputDecoration(
@@ -99,6 +110,8 @@ class AddComponentDrawer extends StatelessWidget {
                           contentPadding: const EdgeInsets.all(20.0),
                         ),
                       ),
+                      SizedBox(height: 20),
+                      AddContentButton(colors: colors)
                     ],
                   )
                 ],
