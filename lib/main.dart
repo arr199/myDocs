@@ -12,16 +12,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => SearchProvider()),
-        ChangeNotifierProvider(create: (context) => AddDocumentProvider())
-      ],
-      child: MaterialApp.router(
-        theme: AppTheme(selectedColor: 3).theme(),
-        debugShowCheckedModeBanner: false,
-        title: 'Arr Documentation',
-        routerConfig: appRouter,
+    return ChangeNotifierProvider(
+      create: (context) => AppThemeProvider(),
+      child: Consumer<AppThemeProvider>(
+        builder: (context, state, child) {
+          final theme = state.theme();
+          return MultiProvider(
+            providers: [
+              ChangeNotifierProvider(create: (context) => SearchProvider()),
+              ChangeNotifierProvider(
+                  create: (context) => AddDocumentProvider()),
+            ],
+            child: MaterialApp.router(
+              theme: theme,
+              debugShowCheckedModeBanner: false,
+              title: 'Arr Documentation',
+              routerConfig: appRouter,
+            ),
+          );
+        },
       ),
     );
   }

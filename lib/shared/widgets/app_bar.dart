@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_docs/features/themeChanger/presentation/widgets/change_theme_button.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool home;
@@ -7,6 +8,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     this.home = false,
   });
+
   @override
   Size get preferredSize => const Size.fromHeight(60.0);
 
@@ -15,7 +17,10 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
     final colors = Theme.of(context).colorScheme;
 
     return AppBar(
-      leading: home 
+      actions: const [
+        ChangeThemeButton(),
+      ],
+      leading: home
           ? null
           : IconButton(
               icon: const Icon(
