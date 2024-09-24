@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_docs/providers/search_provider.dart';
-import 'package:my_docs/screens/home/widgets/docs_list.dart';
-import 'package:my_docs/screens/home/widgets/main_search_bar.dart';
+import 'package:my_docs/features/docs/presentation/providers/search_provider.dart';
+import 'package:my_docs/features/docs/presentation/screens/home/widgets/docs_list.dart';
+import 'package:my_docs/features/docs/presentation/screens/home/widgets/main_search_bar.dart';
 import 'package:my_docs/shared/widgets/app_bar.dart';
 import 'package:provider/provider.dart';
 

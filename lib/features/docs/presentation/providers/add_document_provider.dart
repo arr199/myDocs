@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_docs/schemas/document_component.dart';
+import 'package:my_docs/features/docs/domain/entities/document_component.dart';
 
 class AddDocumentProvider extends ChangeNotifier {
   List<DocumentComponent> componentsList = [

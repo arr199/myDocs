@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_docs/schemas/doc.dart';
+import 'package:my_docs/features/docs/domain/entities/doc.dart';
 
 class DocsList extends StatelessWidget {
   const DocsList({

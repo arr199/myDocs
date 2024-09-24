@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_docs/providers/add_document_provider.dart';
+import 'package:my_docs/features/docs/presentation/providers/add_document_provider.dart';
 import 'package:provider/provider.dart';
 
 class AddContentButton extends StatelessWidget {

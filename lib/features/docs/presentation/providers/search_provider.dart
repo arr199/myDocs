@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_docs/data/data.dart';
-import 'package:my_docs/schemas/doc.dart';
+import 'package:my_docs/features/docs/domain/entities/doc.dart';
 
 class SearchProvider extends ChangeNotifier {
   final searchInputController = TextEditingController();
@@ -23,6 +23,6 @@ class SearchProvider extends ChangeNotifier {
   }
 }
 
-// Path: lib/screens/search_screen.dart
+
 
 

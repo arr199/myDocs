@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_docs/screens/home/widgets/search_button.dart';
+import 'package:my_docs/features/docs/presentation/screens/home/widgets/search_button.dart';
 
 class MainSearchBar extends StatelessWidget {
   const MainSearchBar({

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_docs/providers/add_document_provider.dart';
-import 'package:my_docs/schemas/document_component.dart';
-import 'package:my_docs/screens/createDoc/widgets/add_component_button.dart';
-import 'package:my_docs/screens/createDoc/widgets/add_component_drawer.dart';
-import 'package:my_docs/screens/createDoc/widgets/codeblock_component.dart';
-import 'package:my_docs/screens/createDoc/widgets/description_component.dart';
-import 'package:my_docs/screens/createDoc/widgets/save_button.dart';
-import 'package:my_docs/screens/createDoc/widgets/title_component.dart';
+import 'package:my_docs/features/docs/presentation/providers/add_document_provider.dart';
+import 'package:my_docs/features/docs/domain/entities/document_component.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/add_component_button.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/add_component_drawer.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/codeblock_component.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/description_component.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/save_button.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/title_component.dart';
 import 'package:my_docs/shared/widgets/app_bar.dart';
 import 'package:provider/provider.dart';
 

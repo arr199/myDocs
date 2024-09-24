@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_docs/providers/add_document_provider.dart';
-import 'package:my_docs/schemas/document_component.dart';
-import 'package:my_docs/screens/createDoc/widgets/add_content_button.dart';
+import 'package:my_docs/features/docs/presentation/providers/add_document_provider.dart';
+import 'package:my_docs/features/docs/domain/entities/document_component.dart';
+import 'package:my_docs/features/docs/presentation/screens/createDoc/widgets/add_content_button.dart';
 import 'package:provider/provider.dart';
 
 class AddComponentDrawer extends StatelessWidget {
